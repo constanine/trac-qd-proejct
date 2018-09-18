@@ -1,0 +1,90 @@
+/* 
+
+   This file is part of the VEBERArnaud/svnindex package.
+ 
+   (c) Arnaud VEBER <arnaud@veber.pw>
+ 
+   For the full copyright and license information, please view the LICENSE
+   file that was distributed with this source code. 
+
+ */
+
+body{
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.navbar.navbar-fixed-top {
+  background: #0074D9;
+  color: white;
+  border: none;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-default .navbar-brand:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.jumbotron {
+  background: rgba(0, 116, 217, 0.85);
+  color: white;
+}
+
+.jumbotron .page-header {
+  border: none;
+}
+
+.jumbotron .page-header small {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumb {
+  background: rgba(0, 116, 217, 0.85);
+  color: white;
+}
+
+.list-group {
+  padding-left: 15px;
+}
+
+@media (max-width: 992px) {
+  .list-group {
+    padding-left: 0;
+  }
+}
+
+a.list-group-item:focus,
+a.list-group-item:hover {
+  background: rgba(0, 116, 217, 0.15);
+}
+
+.updir {
+  background: rgba(0, 116, 217, 0.5);
+}
+.updir:hover,
+.updir:focus {
+  background: rgba(0, 116, 217, 0.5);
+}
+
+.dir {
+  background: rgba(0, 116, 217, 0.4);
+}
+.dir:hover,
+.dir:focus {
+  background: rgba(0, 116, 217, 0.4);
+}
+.file {
+  background: rgba(0, 116, 217, 0.3);
+}
+.file:hover,
+.file:focus {
+  background: rgba(0, 116, 217, 0.3);
+}

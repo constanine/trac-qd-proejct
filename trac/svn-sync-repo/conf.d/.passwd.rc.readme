@@ -1,0 +1,9 @@
+# Account for Subversion Repo "A" to sync
+ACCOUNT_SVN_A=userA
+ACCOUNT_SVN_A_PWD=XXX
+
+# Account for Subversion Repo "B" to sync
+ACCOUNT_SVN_B=userB
+ACCOUNT_SVN_B_PWD=XXX
+
+# ... ...

@@ -1,0 +1,75 @@
+ 驱动器 E 中的卷是 Sandbox
+ 卷的序列号是 D4FB-8353
+
+ E:\thinkbase.net\PortableTrac-git\bin\graphviz\lib\release 的目录
+
+2013/01/08  18:05    <DIR>          .
+2013/01/08  18:05    <DIR>          ..
+2013/01/08  17:59    <DIR>          dll
+2013/01/08  17:59    <DIR>          lib
+2013/01/08  18:05                 0 release.list.txt
+               1 个文件              0 字节
+
+ E:\thinkbase.net\PortableTrac-git\bin\graphviz\lib\release\dll 的目录
+
+2013/01/08  17:59    <DIR>          .
+2013/01/08  17:59    <DIR>          ..
+2013/01/07  03:16            26,112 cdt.dll
+2013/01/07  03:16            69,632 cgraph.dll
+2012/09/13  09:22                 0 dummyfile.txt
+2013/01/07  03:17           525,312 gvc.dll
+2013/01/07  03:18            91,648 gvplugin_core.dll
+2013/01/07  03:18           208,896 gvplugin_dot_layout.dll
+2013/01/07  03:18           262,144 gvplugin_gd.dll
+2013/01/07  03:20            45,056 gvplugin_gdiplus.dll
+2013/01/07  03:18           737,792 gvplugin_neato_layout.dll
+2013/01/07  03:18            30,720 gvplugin_pango.dll
+2013/01/07  03:16            34,816 Pathplan.dll
+2013/01/07  03:18            42,496 vmalloc.dll
+              12 个文件      2,074,624 字节
+
+ E:\thinkbase.net\PortableTrac-git\bin\graphviz\lib\release\lib 的目录
+
+2013/01/08  17:59    <DIR>          .
+2013/01/08  17:59    <DIR>          ..
+2013/01/07  03:18           243,876 ast.lib
+2013/01/07  03:16             6,264 cdt.lib
+2013/01/07  03:16            31,008 cgraph.lib
+2013/01/07  03:17           174,562 circogen.lib
+2013/01/07  03:18             1,660 dot.lib
+2013/01/07  03:17           532,100 dotgen.lib
+2012/09/13  09:22                 0 dummyfile.txt
+2013/01/07  03:18           435,802 expr.lib
+2013/01/07  03:17           174,302 fdpgen.lib
+2013/01/07  03:17           981,568 gd.lib
+2012/09/25  13:12            21,650 graph.lib
+2013/01/07  03:16         1,356,434 gts.lib
+2013/01/07  03:17            66,444 gvc.lib
+2013/01/07  03:17           188,090 gvortho.lib
+2013/01/07  03:19             1,698 gvpack.lib
+2013/01/07  03:18             1,938 gvplugin_core.lib
+2013/01/07  03:18             2,274 gvplugin_dot_layout.lib
+2013/01/07  03:18             1,826 gvplugin_gd.lib
+2013/01/07  03:20             2,118 gvplugin_gdiplus.lib
+2013/01/07  03:18            13,168 gvplugin_neato_layout.lib
+2013/01/07  03:18             1,892 gvplugin_pango.lib
+2013/01/07  03:18           451,534 gvprlib.lib
+2013/01/07  03:17            14,682 ingraphs.lib
+2013/01/07  03:17           921,558 neatogen.lib
+2013/01/07  03:18            28,512 osage.lib
+2013/01/07  03:16            52,634 patchwork.lib
+2013/01/07  03:16             6,086 Pathplan.lib
+2013/01/07  03:17            40,450 rbtree.lib
+2013/01/07  03:17           298,984 sfdp.lib
+2013/01/07  03:18           712,302 sfio.lib
+2013/01/07  03:17           158,708 sparse.lib
+2013/01/07  03:19            65,094 topfish.lib
+2013/01/07  03:17            42,212 twopigen.lib
+2013/01/07  03:18             5,310 vmalloc.lib
+2013/01/07  03:17         2,103,082 vpsc.lib
+2013/01/07  03:16            51,724 xdot.lib
+              36 个文件      9,191,546 字节
+
+     所列文件总数:
+              49 个文件     11,266,170 字节
+               8 个目录    720,412,672 可用字节

@@ -1,0 +1,8 @@
+# 启动时被 supervisord.conf 调用的脚本, 以 root 用户执行
+echo "rc.local started at: `date`" > /tmp/rc.local.starting.log
+
+# 避免 trac-admin 执行时报错:
+#  /usr/lib/python2.7/dist-packages/pkg_resources.py:1031: UserWarning: /home/u01/.python-eggs is writable by group/others
+#  and vulnerable to attack when used with get_resource_filename. Consider a more secure location (set with 
+#  .set_extraction_path or the PYTHON_EGG_CACHE environment variable).
+chmod -v g-wx,o-wx /home/u01/.python-eggs > /tmp/rc.local.chmod-.python-eggs.log 2>&1

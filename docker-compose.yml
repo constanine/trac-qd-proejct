@@ -1,0 +1,16 @@
+---
+# 注意: docker-compose 相关命令默认是在包含 docker-compose.yml 的目录下执行。
+#     docker-compose up :         创建容器并启动(不使用 -d 参数时在前台运行, Ctrl-C 停止)
+#     docker-compose down :       停止并删除容器
+#     docker-compose start/stop : 启动/停止 当然服务的所有容器
+#     docker-compose rm :         删除当前服务的所有容器
+#     docker-compose logs :       查看日志(支持 -f 参数)
+#     docker-compose ps :         类似 docker ps
+version: '2'
+services:
+    trac-and-svn:
+        image: trac:1.1
+        ports:
+            - "2003:8080"  # HTTP
+        volumes:
+            - .:/data

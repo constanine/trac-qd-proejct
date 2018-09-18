@@ -1,0 +1,24 @@
+[/]
+* = rw
+
+[/.admin]
+* =
+@admin = rw
+
+[/trunk]
+* = r
+@admin = rw
+@dev = rw
+
+[/branches]
+* = r
+@admin = rw
+@dev = rw
+
+[/tags]
+* = r
+@admin = rw
+
+[groups]
+admin = svn-admin, zzj
+dev = 

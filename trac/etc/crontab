@@ -1,0 +1,12 @@
+# 基本格式 :
+# *     *       *       *       *       command
+# 分    时      日       月      周      命令
+
+# 测试用的 cron 命令
+*   *   *   *   *   date > ~/cron-alive-log
+
+# 每 5 分钟执行一次 SVN 同步
+*/5   *   *   *   *   export BATCH_SHELL_LOG_DIR=/data/trac/logs/svnsync; /data/misc/AdminShells/TaskScheduler/batch-shell.sh --daily /data/trac/svnsync.sh
+
+# 每天 12:00 和 20:00 执行 trac 导出备份
+0   12,20    *   *   *   export BATCH_SHELL_LOG_DIR=/data/trac/logs/trac-backup; /data/misc/AdminShells/TaskScheduler/batch-shell.sh /data/trac/backup.sh

@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -o nounset
+set -o errexit
+
+REPOS="$1"
+REV="$2"
+USER="$3"
+PROPNAME="$4"
+ACTION="$5"
+
+
+if [ "$ACTION" = "M" -a "$PROPNAME" = "svn:log" ];
+then
+    # LOG svn:log modification 
+    export LANG=zh_CN.UTF-8    #Allow SVN original log show Chinese characters
+    ORIG_LOG=`svnlook log $REPOS -r $REV`
+    REPO_NAME=`basename $REPOS`
+    LOG_FILE="$REPO_NAME-r$REV.`date +%Y%m%d-%H%M`.$USER.rev-change.log"
+    # NOTE: Make sure /data/trac/svn-repo/logs is writable for httpd work user(www-data)
+    echo "[PRE]" >> "/data/trac/svn-repo/logs/$LOG_FILE"
+    echo "$ORIG_LOG" >> "/data/trac/svn-repo/logs/$LOG_FILE"
+
+    exit 0;
+fi
+
+echo "Forbidden: Changing revision property '$PROPNAME' (ACTION='$ACTION', USER='$USER')" >&2
+exit 1

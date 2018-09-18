@@ -1,0 +1,4 @@
+*.pyc
+.old
+.egg-cache
+gvcache

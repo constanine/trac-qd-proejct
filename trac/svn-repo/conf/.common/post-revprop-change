@@ -1,0 +1,56 @@
+#!/bin/sh
+
+set -o nounset
+set -o errexit
+
+REPOS="$1"
+REV="$2"
+USER="$3"
+PROPNAME="$4"
+ACTION="$5"
+
+
+# LOG svn:log modification 
+export LANG=zh_CN.UTF-8    #Allow SVN original log show Chinese characters
+ORIG_LOG=`svnlook log $REPOS -r $REV`
+REPO_NAME=`basename $REPOS`
+LOG_FILE="$REPO_NAME-r$REV.`date +%Y%m%d-%H%M`.$USER.rev-change.log"
+# NOTE: Make sure /data/trac/svn-repo/logs is writable for httpd work user(www-data)
+echo "[POST]" >> "/data/trac/svn-repo/logs/$LOG_FILE"
+echo "$ORIG_LOG" >> "/data/trac/svn-repo/logs/$LOG_FILE"
+
+
+# Trac changeset sync
+export PYTHON_EGG_CACHE="/data/trac/svn-repo/tmp"
+# NOTE: Make sure /data/trac/svn-repo/tmp is writable for httpd work user(www-data)
+if [ "$REPO_NAME" = "OA" ]; then
+    /usr/local/bin/trac-admin /data/trac/tracenv/ecomm changeset modified $REPO_NAME $REV
+fi
+if [ "$REPO_NAME" = "Yigo-redist" ]; then
+    /usr/local/bin/trac-admin /data/trac/tracenv/ecomm changeset modified $REPO_NAME $REV
+    /usr/local/bin/trac-admin /data/trac/tracenv/support changeset modified $REPO_NAME $REV
+fi
+if [ "$REPO_NAME" = "team-ecomm" ]; then
+    /usr/local/bin/trac-admin /data/trac/tracenv/ecomm changeset modified $REPO_NAME $REV
+fi
+if [ "$REPO_NAME" = "ecomm" ]; then
+    /usr/local/bin/trac-admin /data/trac/tracenv/ecomm changeset modified $REPO_NAME $REV
+fi
+if [ "$REPO_NAME" = "ecomm-OMS" ]; then
+    /usr/local/bin/trac-admin /data/trac/tracenv/ecomm changeset modified $REPO_NAME $REV
+fi
+if [ "$REPO_NAME" = "ecomm-store" ]; then
+    /usr/local/bin/trac-admin /data/trac/tracenv/ecomm changeset modified $REPO_NAME $REV
+fi
+if [ "$REPO_NAME" = "ecomm-supports" ]; then
+    /usr/local/bin/trac-admin /data/trac/tracenv/shcr changeset modified $REPO_NAME $REV
+    /usr/local/bin/trac-admin /data/trac/tracenv/citic changeset modified $REPO_NAME $REV
+    /usr/local/bin/trac-admin /data/trac/tracenv/ecomm changeset modified $REPO_NAME $REV
+fi
+if  [ "$REPO_NAME" = "ecomm-UE" ]; then
+    /usr/local/bin/trac-admin /data/trac/tracenv/ecomm changeset modified $REPO_NAME $REV
+fi
+if [ "$REPO_NAME" = "mUI" ]; then
+    /usr/local/bin/trac-admin /data/trac/tracenv/sida changeset modified $REPO_NAME $REV
+fi
+exit 0;

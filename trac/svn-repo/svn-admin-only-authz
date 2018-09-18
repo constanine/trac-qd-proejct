@@ -1,0 +1,11 @@
+# This is the svn authz file which only allow user "svn-admin" to access only.
+#
+# 1. Use this file in "AuthzSVNAccessFile" directive:
+#   AuthzSVNAccessFile ${SITE_BASE}/svn-repo/svn-admin-only-authz
+# 2. Create a user named "svn-admin":
+#   htpasswd /data/trac/protected/passwd svn-admin
+#
+
+[/]
+* =
+svn-admin = rw
